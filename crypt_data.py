@@ -96,9 +96,7 @@ class CryptEncryptDataBase:
     def create_new_file(self):
         if not os.path.exists('crypt_data'):
             os.makedirs('crypt_data')
-            print('fuck')
         if not os.path.exists('crypt_data/crypt_data.bin') or not os.path.exists('crypt_data/key.bin'):
-            print('suck')
             new_user = User(id=1, username='admin', password='1111', is_ban=0, is_admin=1, password_limit=0)
             self.users.append(new_user)
             self.crypt_data()
